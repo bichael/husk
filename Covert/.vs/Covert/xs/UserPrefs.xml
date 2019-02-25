@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{0FA99711-8F3B-1D9B-9F14-273495C6F14F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DotController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/DotController.cs" Line="37" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
