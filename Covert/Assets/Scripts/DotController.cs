@@ -8,7 +8,6 @@ public class DotController : MonoBehaviour
 
     GameObject dot;
     GameObject zone;
-    Text[] txt;
     private float posx = 0;
     private float posy = 0;
     private float posz = 0;
@@ -59,6 +58,7 @@ public class DotController : MonoBehaviour
         } 
 
         dot.transform.position = new Vector3(posx, posy, posz);
+        Camera.main.gameObject.transform.position = new Vector3(posx, posy, -10);
 
     }
 
