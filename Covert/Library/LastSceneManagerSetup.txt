@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Covert.unity
+- path: Assets/Scenes/basic_room.unity
   isLoaded: 1
   isActive: 1

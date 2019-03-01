@@ -9,7 +9,7 @@ public class DotController : MonoBehaviour
     GameObject dot;
     GameObject zone;
     private float posx = 0;
-    private float posy = 0;
+    private float posy = 1.5F;
     private float posz = 0;
 
 
@@ -50,15 +50,15 @@ public class DotController : MonoBehaviour
         }
         if (moveUp)
         {
-            posy += 0.05F;
+            posz += 0.05F;
         }
         if (moveDown)
         {
-            posy -= 0.05F;
+            posz -= 0.05F;
         } 
 
         dot.transform.position = new Vector3(posx, posy, posz);
-        Camera.main.gameObject.transform.position = new Vector3(posx, posy, -10);
+        Camera.main.gameObject.transform.position = new Vector3(posx, 25, posz);
 
     }
 
