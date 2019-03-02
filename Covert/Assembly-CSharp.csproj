@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\DotController.cs" />
+     <Compile Include="Assets\Scripts\BasicMovement.cs" />
+     <Compile Include="Assets\Scripts\KeepCameraInBounds.cs" />
+     <Compile Include="Assets\Scripts\ScarlettController.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/master/husk/Covert/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
