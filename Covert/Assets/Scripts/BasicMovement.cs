@@ -25,7 +25,8 @@ public class BasicMovement : MonoBehaviour
         animator.SetFloat("Magnitude", movement.magnitude);
         transform.position = transform.position + movement * Time.deltaTime;
         
-        direction = Mathf.Atan2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * (180 / Mathf.PI);
+        // direction = Mathf.Atan2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * (180 / Mathf.PI);
+        direction = Mathf.Atan2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * (180 / Mathf.PI);
         if (direction != 0) {
             animator.SetFloat("Direction", direction/180); // Values are in degrees from -180 to 180, but the Animator expects -1 to 1.
         }
