@@ -57,6 +57,9 @@
      <Compile Include="Assets\Scripts\BasicMovement.cs" />
      <Compile Include="Assets\Scripts\KeepCameraInBounds.cs" />
      <Compile Include="Assets\Scripts\ScarlettController.cs" />
+     <Compile Include="Assets\Scripts\shadow scripts\CustomFixedUpdate.cs" />
+     <Compile Include="Assets\Scripts\shadow scripts\OnShadowState.cs" />
+     <Compile Include="Assets\Scripts\shadow scripts\ShadowDetect.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dev/husk/Covert/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
