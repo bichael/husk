@@ -7,6 +7,7 @@ public class BasicMovement : MonoBehaviour
 
     public Animator animator;
     public float direction;
+    public float Force = 1.0F;
 
     // Start is called before the first frame update
     void Start()

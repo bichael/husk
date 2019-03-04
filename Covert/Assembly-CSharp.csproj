@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ScarletCollision.cs" />
      <Compile Include="Assets\Scripts\BasicMovement.cs" />
      <Compile Include="Assets\Scripts\KeepCameraInBounds.cs" />
      <Compile Include="Assets\Scripts\ScarlettController.cs" />
