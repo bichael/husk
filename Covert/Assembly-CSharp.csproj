@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Note1Script.cs" />
      <Compile Include="Assets\ScarletCollision.cs" />
      <Compile Include="Assets\Scripts\AnimatorManager.cs" />
      <Compile Include="Assets\Scripts\BasicMovement.cs" />
