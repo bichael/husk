@@ -53,11 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Note1Script.cs" />
      <Compile Include="Assets\ScarletCollision.cs" />
      <Compile Include="Assets\Scripts\AnimatorManager.cs" />
      <Compile Include="Assets\Scripts\BasicMovement.cs" />
      <Compile Include="Assets\Scripts\KeepCameraInBounds.cs" />
+     <Compile Include="Assets\Scripts\LightScript.cs" />
+     <Compile Include="Assets\Scripts\Note1Script.cs" />
      <Compile Include="Assets\Scripts\ScarlettController.cs" />
      <Compile Include="Assets\Scripts\shadow scripts\CustomFixedUpdate.cs" />
      <Compile Include="Assets\Scripts\shadow scripts\OnShadowState.cs" />
@@ -83,19 +84,19 @@
      <None Include="Assets\TopDown_AI\Shaders\WaterEffect2D.shader" />
      <None Include="Assets\TopDown_AI\ReadMe.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -299,13 +300,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/dontcare/husk/Covert/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/bike/Documents/MSU-Spr19/Game Design/git/doublecheck/husk/Covert/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
