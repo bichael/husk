@@ -5,13 +5,15 @@ using UnityEngine;
 public class WhiteBoxController : MonoBehaviour
 {
     GameObject Scarlett;
-    GameObject WhiteBox;
+    public Transform _boxTransform;
+
     bool boxLocked = false;
     // Start is called before the first frame update
     void Start()
     {
         Scarlett = GameObject.Find("Scarlett");
-        WhiteBox = GameObject.Find("WhiteBox");
+        if (_boxTransform == null)
+            _boxTransform = gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -44,17 +46,17 @@ public class WhiteBoxController : MonoBehaviour
             if(boxLocked)
             {
                 if(moveRight)
-                    WhiteBox.transform.position = 
-                    new Vector3(WhiteBox.transform.position.x + 0.02F, WhiteBox.transform.position.y, -0.28F);
+                    _boxTransform.position = 
+                    new Vector3(_boxTransform.position.x + 0.02F, _boxTransform.position.y, -0.28F);
                 if (moveLeft)
-                    WhiteBox.transform.position =
-                    new Vector3(WhiteBox.transform.position.x - 0.02F, WhiteBox.transform.position.y, -0.28F);
+                    _boxTransform.position =
+                    new Vector3(_boxTransform.position.x - 0.02F, _boxTransform.position.y, -0.28F);
                 if (moveUp)
-                    WhiteBox.transform.position =
-                    new Vector3(WhiteBox.transform.position.x, WhiteBox.transform.position.y + 0.02F, -0.28F);
+                    _boxTransform.position =
+                    new Vector3(_boxTransform.position.x, _boxTransform.position.y + 0.02F, -0.28F);
                 if (moveDown)
-                    WhiteBox.transform.position =
-                    new Vector3(WhiteBox.transform.position.x, WhiteBox.transform.position.y - 0.02F, -0.28F);
+                    _boxTransform.position =
+                    new Vector3(_boxTransform.position.x, _boxTransform.position.y - 0.02F, -0.28F);
             }
         }
 
@@ -64,8 +66,8 @@ public class WhiteBoxController : MonoBehaviour
     {
         float scarlettPosX = Scarlett.transform.position.x;
         float scarlettPosY = Scarlett.transform.position.y;
-        float boxPosX = WhiteBox.transform.position.x;
-        float boxPosY = WhiteBox.transform.position.y;
+        float boxPosX = _boxTransform.position.x;
+        float boxPosY = _boxTransform.position.y;
 
         return (scarlettPosX < boxPosX + 1.5) && (scarlettPosX > boxPosX - 1.5) 
         && (scarlettPosY < boxPosY + 2) && (scarlettPosY > boxPosY - 2);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BasicMovement : MonoBehaviour
 {
 
+	Rigidbody myRigidBody;
     public Animator animator;
     public float direction;
     public float Force = 1.0F;
@@ -12,6 +13,7 @@ public class BasicMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		myRigidBody = GetComponent<Rigidbody> ();
         
     }
 
@@ -19,10 +21,10 @@ public class BasicMovement : MonoBehaviour
     void Update()
     {
         
-        Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0.0f);
+        Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
 
         animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Vertical", movement.z);
         animator.SetFloat("Magnitude", movement.magnitude);
         transform.position = transform.position + movement * Time.deltaTime;
         
@@ -33,5 +35,19 @@ public class BasicMovement : MonoBehaviour
         }
         
     }
+
+    
+	public void DamagePlayer(){
+		animator.SetBool ("Dead", true);
+		animator.transform.parent = null;
+		this.enabled = false;
+		myRigidBody.isKinematic = true;
+		GameManager.RegisterPlayerDeath ();
+		gameObject.GetComponent<Collider> ().enabled = false;
+		GameCamera.ToggleShake (0.3f);
+		Vector3 pos = animator.transform.position;
+		pos.y = 0.2f;
+		animator.transform.position = pos;
+	}
     
 }
