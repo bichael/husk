@@ -5,27 +5,30 @@ using UnityEngine;
 public class Note1Script : MonoBehaviour
 {
     GameObject Scarlett;
-    GameObject Note;
     GameObject StoryNote;
-    bool boxLocked = false;
+    bool noteShown = false;
+    public Transform _noteTransform;
     // Start is called before the first frame update
     void Start()
     {
         Scarlett = GameObject.Find("Scarlett");
-        Note = GameObject.Find("Note 1");
-        StoryNote = GameObject.Find("StoryNote1");
+        StoryNote = GameObject.Find("Note");
+        if(_noteTransform == null)
+        {
+            _noteTransform = gameObject.GetComponent<Transform>();
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         bool lockBoxToScarlett = Input.GetKeyUp(KeyCode.Space);
-        if (!boxLocked)
+        if (!noteShown)
         {
             if (lockBoxToScarlett)
             {
                 if (scarlettWithinRange())
-                    boxLocked = true;
+                    noteShown = true;
                 Debug.Log("Moving Note...");
                 StoryNote.transform.position = new Vector3(-100, -100, -100);
             }
@@ -35,9 +38,9 @@ public class Note1Script : MonoBehaviour
             Debug.Log("Note Moved.");
             if (lockBoxToScarlett)
             {
-                boxLocked = false;
+                noteShown = false;
                 Debug.Log("Moving Note back...");
-                StoryNote.transform.position = new Vector3(11.5F, -30, 0);
+                StoryNote.transform.position = new Vector3(-20, -10, 0);
             }
 
         }
@@ -48,8 +51,8 @@ public class Note1Script : MonoBehaviour
     {
         float scarlettPosX = Scarlett.transform.position.x;
         float scarlettPosY = Scarlett.transform.position.y;
-        float boxPosX = Note.transform.position.x;
-        float boxPosY = Note.transform.position.y;
+        float boxPosX = _noteTransform.position.x;
+        float boxPosY = _noteTransform.position.y;
 
         return (scarlettPosX < boxPosX + 1.5) && (scarlettPosX > boxPosX - 1.5)
         && (scarlettPosY < boxPosY + 2) && (scarlettPosY > boxPosY - 2);

@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{0FA99711-8F3B-1D9B-9F14-273495C6F14F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Note1Script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Note1Script.cs">
     <Files>
       <File FileName="Assets/Scripts/BasicMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/WhiteBoxController.cs" Line="75" Column="1" />
       <File FileName="Assets/Scripts/ScarlettController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Note1Script.cs" Line="14" Column="48" />
+      <File FileName="Assets/Scripts/WhiteBoxController.cs" Line="59" Column="63" />
+      <File FileName="Assets/TopDown_AI/Scripts/iTween.cs" Line="4106" Column="1" />
+      <File FileName="Assets/Scripts/Note1Script.cs" Line="14" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
