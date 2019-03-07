@@ -44,19 +44,19 @@ public class WhiteBoxController : MonoBehaviour
 
 
             if(boxLocked)
-            {
-                if(moveRight)
+            { 
+                if (moveRight)
                     _boxTransform.position = 
-                    new Vector3(_boxTransform.position.x + 0.02F, _boxTransform.position.y, -0.28F);
+                    new Vector3(_boxTransform.position.x + 0.02F, 0.5F, _boxTransform.position.z);
                 if (moveLeft)
                     _boxTransform.position =
-                    new Vector3(_boxTransform.position.x - 0.02F, _boxTransform.position.y, -0.28F);
+                    new Vector3(_boxTransform.position.x - 0.02F, 0.5F, _boxTransform.position.z);
                 if (moveUp)
                     _boxTransform.position =
-                    new Vector3(_boxTransform.position.x, _boxTransform.position.y + 0.02F, -0.28F);
+                    new Vector3(_boxTransform.position.x, 0.5F, _boxTransform.position.z + 0.02F);
                 if (moveDown)
                     _boxTransform.position =
-                    new Vector3(_boxTransform.position.x, _boxTransform.position.y - 0.02F, -0.28F);
+                    new Vector3(_boxTransform.position.x, 0.5F, _boxTransform.position.z - 0.02F);
             }
         }
 
@@ -65,12 +65,12 @@ public class WhiteBoxController : MonoBehaviour
     bool scarlettWithinRange()
     {
         float scarlettPosX = Scarlett.transform.position.x;
-        float scarlettPosY = Scarlett.transform.position.y;
+        float scarlettPosZ = Scarlett.transform.position.z;
         float boxPosX = _boxTransform.position.x;
-        float boxPosY = _boxTransform.position.y;
+        float boxPosZ = _boxTransform.position.z;
 
         return (scarlettPosX < boxPosX + 1.5) && (scarlettPosX > boxPosX - 1.5) 
-        && (scarlettPosY < boxPosY + 2) && (scarlettPosY > boxPosY - 2);
+        && (scarlettPosZ < boxPosZ + 2) && (scarlettPosZ > boxPosZ - 2);
     }
 
 }
