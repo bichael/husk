@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 448}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 15575
+  controlID: 16769
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -84,18 +84,18 @@ MonoBehaviour:
       y: 17
       width: 1879
       height: 450
-    m_Scale: {x: 0.41666666, y: 0.41666666}
-    m_Translation: {x: 939.5, y: 225}
+    m_Scale: {x: 0.79769874, y: 0.79769874}
+    m_Translation: {x: 939.5, y: 205.92815}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2254.8
-      y: -540
-      width: 4509.6
-      height: 1080
+      x: -1177.763
+      y: -258.15277
+      width: 2355.526
+      height: 564.12274
     m_MinimalGUI: 1
   m_defaultScale: 0.41666666
   m_TargetTexture: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 448}
   m_MaxSize: {x: 8006, y: 8048}
   vertical: 1
-  controlID: 15555
+  controlID: 16770
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 15556
+  controlID: 16771
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +212,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e873ffffd674ffff7278fffff8a2ffff38bcffff80eeffffa0f1ffffa8f1ffffb2fbfffff42e00002a2f0000322f0000582f0000742f0000902f0000bc2f0000e62f00007630000028650000a0680000
+      m_ExpandedIDs: 0c06ffffe606ffff4207ffff5c26ffff9039ffffa239ffff2840ffff4e4dffff6c4fffff7c50ffff185cffff285cffff425dffff4e5dffffd05effffe45effff4064ffff5066ffff8467ffffd674ffff7278fffff8a2ffff38bcffff80eeffffa0f1ffffa8f1ffffb2fbfffff42e00002a2f0000322f0000582f0000742f0000902f0000bc2f0000e62f00007630000028650000a06800008a7e0000ea7e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 1471
     height: 820
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -295,9 +295,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.913258, y: 3.6816406, z: 1.9671631}
+    m_Target: {x: -2.0533047, y: -0.9589844, z: 1.201294}
     speed: 2
-    m_Value: {x: 9.913258, y: 3.6816406, z: 1.9671631}
+    m_Value: {x: -2.0533047, y: -0.9589844, z: 1.201294}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -325,13 +325,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.67390656, y: 0.0042365063, z: -0.0038010569, w: 0.7387946}
+    m_Target: {x: 0.55593157, y: -0.0052594724, z: 0.0034756763, w: 0.8312042}
     speed: 2
-    m_Value: {x: 0.67390656, y: 0.0042365063, z: -0.0038010569, w: 0.7387946}
+    m_Value: {x: 0.55593157, y: -0.0052594724, z: 0.0034756763, w: 0.8312042}
   m_Size:
-    m_Target: 14.190831
+    m_Target: 20.79161
     speed: 2
-    m_Value: 14.190831
+    m_Value: 20.79161
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 22984
+  m_LastSelectedObjectID: -35670
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 348}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 15576
+  controlID: 16631
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -829,19 +829,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\bike\Documents\MSU-Spr19\Game Design\git\doublecheck\husk\Covert
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c0f0000
-    m_LastClickedID: 3868
+    m_SelectedIDs: 0c0e0000
+    m_LastClickedID: 3596
     m_ExpandedIDs: 00000000f40900000a0a0000040d00000c0e0000200e0000520f000008110000783200007a3200007c3200007e32000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -895,8 +895,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: aa74ffff
-    m_LastClickedInstanceID: -35670
+    m_SelectedInstanceIDs: e404ffff
+    m_LastClickedInstanceID: -64284
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006e290000da87ffff1e2e000000000000fa290000443700009a400000
     m_RenameOverlay:
