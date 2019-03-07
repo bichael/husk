@@ -38,7 +38,7 @@ public class NPC_Enemy : MonoBehaviour {
 		npcAnimator.SetInteger ("WeaponType", (int)weaponType);
 		switch (weaponType) {
 			case NPC_WeaponType.KNIFE:
-				weaponRange=1.0f;
+				weaponRange=3.0f;
 				weaponActionTime=0.2f;
 				weaponTime=0.4f;
 			break;
@@ -275,7 +275,8 @@ public class NPC_Enemy : MonoBehaviour {
 		RaycastHit[] hits=Physics.SphereCastAll (weaponPivot.position,2.0f, weaponPivot.forward);
 		foreach(RaycastHit hit in hits){
 			if (hit.collider!=null && hit.collider.tag == "Player") {
-				hit.collider.GetComponent<BasicMovement>().DamagePlayer();
+				Application.LoadLevel(Application.loadedLevel);
+				// hit.collider.GetComponent<BasicMovement>().DamagePlayer();
 			}
 		}
 		// switch (weaponType) {

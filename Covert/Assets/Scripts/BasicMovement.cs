@@ -38,16 +38,17 @@ public class BasicMovement : MonoBehaviour
 
     
 	public void DamagePlayer(){
+        Debug.Log("Damaged player");
 		animator.SetBool ("Dead", true);
-		animator.transform.parent = null;
-		this.enabled = false;
+		// animator.transform.parent = null;
+		// this.enabled = false;
 		myRigidBody.isKinematic = true;
 		GameManager.RegisterPlayerDeath ();
-		gameObject.GetComponent<Collider> ().enabled = false;
+		// gameObject.GetComponent<Collider> ().enabled = false;
 		GameCamera.ToggleShake (0.3f);
-		Vector3 pos = animator.transform.position;
-		pos.y = 0.2f;
-		animator.transform.position = pos;
+		// Vector3 pos = animator.transform.position;
+		// pos.y = 0.2f;
+		// animator.transform.position = pos;
 	}
     
 }

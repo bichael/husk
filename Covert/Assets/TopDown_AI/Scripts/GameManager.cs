@@ -28,9 +28,12 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameOver && Input.GetKeyDown(KeyCode.R)) {
+		if (gameOver) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
+		// if (gameOver && Input.GetKeyDown(KeyCode.R)) {
+		// 	Application.LoadLevel(Application.loadedLevel);
+		// }
 
 	}
 	public static void AddScore(int pointsAdded){
@@ -42,11 +45,12 @@ public class GameManager : MonoBehaviour {
 		iTween.ScaleTo (myslf.scoreText.gameObject, iTween.Hash ("scale", Vector3.one, "time", 0.25f, "delay", 0.1f, "easetype", iTween.EaseType.spring));
 	}
 	public static void RegisterPlayerDeath(){
+		Debug.Log("death");
 		//TODO HANDLE DEATH!  Alternatively, use GameManager.gameOver flag elsewhere to restart level or whatever.
-		myslf.restartMessage.SetActive (true);
-		myslf.restartMessage.transform.localScale = Vector3.one *2.0f;
-		iTween.Stop (myslf.restartMessage.gameObject);
-		iTween.ScaleTo (myslf.restartMessage, iTween.Hash ("scale", Vector3.one, "time", 0.5f, "delay", 0.1f, "easetype", iTween.EaseType.spring));
+		// myslf.restartMessage.SetActive (true);
+		// myslf.restartMessage.transform.localScale = Vector3.one *2.0f;
+		// iTween.Stop (myslf.restartMessage.gameObject);
+		// iTween.ScaleTo (myslf.restartMessage, iTween.Hash ("scale", Vector3.one, "time", 0.5f, "delay", 0.1f, "easetype", iTween.EaseType.spring));
 		myslf.gameOver = true;
 	}
 	public static void SelectWeapon(PlayerWeaponType weaponType){
