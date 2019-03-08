@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 public enum NPC_EnemyState{IDLE_STATIC,IDLE_ROAMER,IDLE_PATROL,INSPECT,ATTACK,FIND_WEAPON,KNOCKED_OUT,DEAD,NONE}
 public enum NPC_WeaponType{KNIFE,RIFLE,SHOTGUN}
 public class NPC_Enemy : MonoBehaviour {
@@ -97,7 +98,7 @@ public class NPC_Enemy : MonoBehaviour {
 	
 	
 	void StateInit_IdlePatrol(){	
-		navMeshAgent.speed = 6.0f;
+		navMeshAgent.speed = 2.0f;
 		navMeshAgent.SetDestination (patrolNode.GetPosition ());
 	}
 	void StateUpdate_IdlePatrol(){	
@@ -200,16 +201,19 @@ public class NPC_Enemy : MonoBehaviour {
 	Misc_Timer inspectTimer = new Misc_Timer ();
 	Misc_Timer inspectTurnTimer = new Misc_Timer ();
 	bool inspectWait;
-	void StateInit_Inspect(){	
-		navMeshAgent.speed = 16.0f;
+	void StateInit_Inspect(){
+		Debug.Log("init inspect");
+		navMeshAgent.speed = 2.0f;
 		navMeshAgent.Resume ();
 		inspectTimer.StopTimer ();
 		inspectWait = false;
 	}
 	void StateUpdate_Inspect(){	
+		Debug.Log("update inspect");
 
 		if (!(GameManager.GetIsPlayerVisible())) {
-			return;
+			Debug.Log("exited bc invisible");
+			// return; // TODO Enable this flag.
 		}
 
 		if (HasReachedMyDestination () && !inspectWait) {
@@ -222,6 +226,7 @@ public class NPC_Enemy : MonoBehaviour {
 		Physics.Raycast (transform.position,transform.forward, out hit,weaponRange,hitTestLayer);
 
 		if (hit.collider != null && hit.collider.tag == "Player") {
+			Debug.Log("hit ~~something~~");
 			SetState(NPC_EnemyState.ATTACK);
 		}
 		if (inspectWait) {
@@ -241,7 +246,8 @@ public class NPC_Enemy : MonoBehaviour {
 	///////////////////////////////////////////////////////// STATE: ATTACK
 	Misc_Timer attackActionTimer=new Misc_Timer();
 	bool actionDone;
-	void StateInit_Attack(){	
+	void StateInit_Attack(){
+		Debug.Log("init attack");	
 		navMeshAgent.Stop ();
 		navMeshAgent.velocity = Vector3.zero;
 		npcAnimator.SetBool ("Attack", true);		
@@ -252,6 +258,7 @@ public class NPC_Enemy : MonoBehaviour {
 		actionDone = false;
 	}
 	void StateUpdate_Attack(){	
+		Debug.Log("update attack");
 		attackActionTimer.UpdateTimer ();
 		if (!actionDone && attackActionTimer.IsFinished ()) {
 			EndAttack();
@@ -260,22 +267,25 @@ public class NPC_Enemy : MonoBehaviour {
 		}
 	}
 	void StateEnd_Attack(){	
+		Debug.Log("end attack");
 		npcAnimator.SetBool ("Attack", false);
 	}
 	void EndAttack(){
 		SetState (NPC_EnemyState.INSPECT);
 	}
 	void AttackAction(){
+		Debug.Log("attack action");
 		
 		if (!(GameManager.GetIsPlayerVisible())) {
-			return;
+			// return; // TODO Enable this flag.
 		}
 
 		// Took knife attack action to simulate being within arm's reach.
 		RaycastHit[] hits=Physics.SphereCastAll (weaponPivot.position,2.0f, weaponPivot.forward);
 		foreach(RaycastHit hit in hits){
 			if (hit.collider!=null && hit.collider.tag == "Player") {
-				Application.LoadLevel(Application.loadedLevel);
+				Debug.Log("HE DED!");
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 				// hit.collider.GetComponent<BasicMovement>().DamagePlayer();
 			}
 		}
